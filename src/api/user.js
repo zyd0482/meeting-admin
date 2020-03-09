@@ -1,24 +1,21 @@
-import request from '@/utils/request'
+import { Post }  from '@/utils/request'
+import qs from 'qs'
 
 export function login(data) {
-  return request({
-    url: '/meeting-admin/user/login',
-    method: 'post',
+  return Post({
+    url: '/user/login',
     data
   })
 }
 
 export function getInfo(token) {
-  return request({
-    url: '/meeting-admin/user/info',
-    method: 'get',
-    params: { token }
+  return Post({
+    url: '/user/info'
   })
 }
 
 export function logout() {
-  return request({
-    url: '/meeting-admin/user/logout',
-    method: 'post'
+  return Post({
+    url: '/user/logout',
   })
 }
