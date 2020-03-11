@@ -106,6 +106,10 @@ export default {
       })
     },
     handleLogin() {
+      var obj = ['admin']
+      var str = JSON.stringify(obj)
+      console.log(obj)
+      console.log(str)
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           this.loading = true
